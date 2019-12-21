@@ -23,8 +23,14 @@ concept MyTest =  requires(T& t) {
       { T{{}, {}} }; };
 
 template <typename T>
-concept MyTest3 = MyTest<T> && requires(T& t) {
-      { T{{}, {}, {}} }; };
+concept MyTest3 =
+    MyTest<T> &&
+    requires(T& t)
+    {
+        {
+            T{ {}, {}, {} }
+        };
+    };
 
 struct MyStruct
 {
