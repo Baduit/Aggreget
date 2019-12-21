@@ -416,5 +416,10 @@ auto to_tuple_impl(Has24attr auto t)
 
 
 }
+auto to_tuple(auto t)
+{
+return details::to_tuple_impl(t);
+}
+
 
 }

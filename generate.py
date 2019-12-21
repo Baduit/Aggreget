@@ -42,6 +42,8 @@ def generate_to_tuple(n: int, output_file: typing.TextIO):
 
 	output_file.write('}\n\n')
 
+
+
 def main():
 	parser = argparse.ArgumentParser(description='Graphical user interface for YololTranslator')
 	parser.add_argument('-n', '--nb', default=25, help='The max number of attributes handled')
@@ -67,6 +69,11 @@ def main():
 		generate_to_tuple(i, output_file)
 
 	output_file.write('\n}\n')
+
+	output_file.write('auto to_tuple(auto t)\n') # TODO create concept with std::is_aggregate
+	output_file.write('{\n')
+	output_file.write('return details::to_tuple_impl(t);\n')
+	output_file.write('}\n\n')
 
 	output_file.write('\n}\n')
 
