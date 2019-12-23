@@ -1,6 +1,6 @@
 # Aggreget
 ## Description
-Aggreget (aggreget get) let you usr your structures like tuple. Similar to [MagicGet](https://github.com/apolukhin/magic_get) but using C++ 20 concepts.
+Aggreget (aggreget get) let you use your structures like tuples. Similar to [MagicGet](https://github.com/apolukhin/magic_get) but using C++ 20 concepts.
 
 Your structures must be an [aggregate](https://en.cppreference.com/w/cpp/language/aggreget_initialization)  type and all its fields must be [default constructible](https://en.cppreference.com/w/cpp/types/is_default_constructible).
 
