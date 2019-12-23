@@ -47,14 +47,14 @@ def generate_to_tuple(n: int, output_file: typing.TextIO):
 def main():
 	parser = argparse.ArgumentParser(description='Graphical user interface for YololTranslator')
 	parser.add_argument('-n', '--nb', default=25, help='The max number of attributes handled')
-	parser.add_argument('-o', '--output', default='aggreget.hpp', help='Path of the output file')
+	parser.add_argument('-o', '--output', default='aggreget_generated.hpp', help='Path of the output file')
 	args = parser.parse_args()
 	
 	output_file = open(args.output, "w")
 	output_file.write('#pragma once\n\n')
 	output_file.write('#include <tuple>\n\n')
 
-	output_file.write('namespace aggregate\n')
+	output_file.write('namespace aggreget\n')
 	output_file.write('{\n\n')
 
 	output_file.write('namespace details\n')
@@ -69,11 +69,6 @@ def main():
 		generate_to_tuple(i, output_file)
 
 	output_file.write('\n}\n')
-
-	output_file.write('auto to_tuple(auto t)\n') # TODO create concept with std::is_aggregate
-	output_file.write('{\n')
-	output_file.write('return details::to_tuple_impl(t);\n')
-	output_file.write('}\n\n')
 
 	output_file.write('\n}\n')
 
