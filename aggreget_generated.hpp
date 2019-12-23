@@ -23,7 +23,7 @@ concept Has0attr =
 
 template <typename T>
 concept Has1attr = 
-Has0attr<T> &&
+	Has0attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -33,7 +33,7 @@ Has0attr<T> &&
 
 template <typename T>
 concept Has2attr = 
-Has1attr<T> &&
+	Has1attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -43,7 +43,7 @@ Has1attr<T> &&
 
 template <typename T>
 concept Has3attr = 
-Has2attr<T> &&
+	Has2attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -53,7 +53,7 @@ Has2attr<T> &&
 
 template <typename T>
 concept Has4attr = 
-Has3attr<T> &&
+	Has3attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -63,7 +63,7 @@ Has3attr<T> &&
 
 template <typename T>
 concept Has5attr = 
-Has4attr<T> &&
+	Has4attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -73,7 +73,7 @@ Has4attr<T> &&
 
 template <typename T>
 concept Has6attr = 
-Has5attr<T> &&
+	Has5attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -83,7 +83,7 @@ Has5attr<T> &&
 
 template <typename T>
 concept Has7attr = 
-Has6attr<T> &&
+	Has6attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -93,7 +93,7 @@ Has6attr<T> &&
 
 template <typename T>
 concept Has8attr = 
-Has7attr<T> &&
+	Has7attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -103,7 +103,7 @@ Has7attr<T> &&
 
 template <typename T>
 concept Has9attr = 
-Has8attr<T> &&
+	Has8attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -113,7 +113,7 @@ Has8attr<T> &&
 
 template <typename T>
 concept Has10attr = 
-Has9attr<T> &&
+	Has9attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -123,7 +123,7 @@ Has9attr<T> &&
 
 template <typename T>
 concept Has11attr = 
-Has10attr<T> &&
+	Has10attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -133,7 +133,7 @@ Has10attr<T> &&
 
 template <typename T>
 concept Has12attr = 
-Has11attr<T> &&
+	Has11attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -143,7 +143,7 @@ Has11attr<T> &&
 
 template <typename T>
 concept Has13attr = 
-Has12attr<T> &&
+	Has12attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -153,7 +153,7 @@ Has12attr<T> &&
 
 template <typename T>
 concept Has14attr = 
-Has13attr<T> &&
+	Has13attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -163,7 +163,7 @@ Has13attr<T> &&
 
 template <typename T>
 concept Has15attr = 
-Has14attr<T> &&
+	Has14attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -173,7 +173,7 @@ Has14attr<T> &&
 
 template <typename T>
 concept Has16attr = 
-Has15attr<T> &&
+	Has15attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -183,7 +183,7 @@ Has15attr<T> &&
 
 template <typename T>
 concept Has17attr = 
-Has16attr<T> &&
+	Has16attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -193,7 +193,7 @@ Has16attr<T> &&
 
 template <typename T>
 concept Has18attr = 
-Has17attr<T> &&
+	Has17attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -203,7 +203,7 @@ Has17attr<T> &&
 
 template <typename T>
 concept Has19attr = 
-Has18attr<T> &&
+	Has18attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -213,7 +213,7 @@ Has18attr<T> &&
 
 template <typename T>
 concept Has20attr = 
-Has19attr<T> &&
+	Has19attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -223,7 +223,7 @@ Has19attr<T> &&
 
 template <typename T>
 concept Has21attr = 
-Has20attr<T> &&
+	Has20attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -233,7 +233,7 @@ Has20attr<T> &&
 
 template <typename T>
 concept Has22attr = 
-Has21attr<T> &&
+	Has21attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -243,7 +243,7 @@ Has21attr<T> &&
 
 template <typename T>
 concept Has23attr = 
-Has22attr<T> &&
+	Has22attr<T> &&
 	requires(T& t)
 	{
 		{
@@ -253,7 +253,7 @@ Has22attr<T> &&
 
 template <typename T>
 concept Has24attr = 
-Has23attr<T> &&
+	Has23attr<T> &&
 	requires(T& t)
 	{
 		{
