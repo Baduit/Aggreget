@@ -8,6 +8,8 @@ Requires C++20. (because of concepts)
 
 Tested with gcc 10 20191220 (experimental).
 
+You can try it online on: https://godbolt.org/z/sW7zA8.
+
 ## Examples
 Imagine you have the following structure:
 ```C++
