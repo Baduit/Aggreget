@@ -42,7 +42,7 @@ std::cout << "Aggreget (The same as above but in one function)" << std::endl;
 The whole example is in the file __example.cpp__.
 
 ## How to add it into my project?
-Just add the files __aggreget.hpp__ and __aggreget_generated.hpp__ into your project include path.
+Just add the files __aggreget.hpp__, __aggregate_concept.hpp__ and __aggreget_generated.hpp__ into your project include path.
 
 ## How does it work?
 There is a concept for each number of attributes a structure can have (default is 0 to 24). To declare these concepts I use aggregate initialization: if I can initialize a structure like this `MyStruct { {}, {}}` this mean that the structure has atleast 2 fields.
