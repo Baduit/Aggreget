@@ -24,19 +24,19 @@ AwesomeStruct my_awesome_struct = {"Yolol", 42, 42.42};
 ```
 You can transform it into a tuple and use your tuple:
 ```Cpp
-	std::cout << "To tuple then std::get" << std::endl;
-	auto my_struct_as_tuple = aggreget::to_tuple(my_awesome_struct);
-	std::cout << "The string is: " << std::get<0>(my_struct_as_tuple) << std::endl;
-	std::cout << "The int is: " << std::get<1>(my_struct_as_tuple) << std::endl;
-	std::cout << "The double is: " << std::get<2>(my_struct_as_tuple) << std::endl;
+std::cout << "To tuple then std::get" << std::endl;
+auto my_struct_as_tuple = aggreget::to_tuple(my_awesome_struct);
+std::cout << "The string is: " << std::get<0>(my_struct_as_tuple) << std::endl;
+std::cout << "The int is: " << std::get<1>(my_struct_as_tuple) << std::endl;
+std::cout << "The double is: " << std::get<2>(my_struct_as_tuple) << std::endl;
 ```
 
 You can even get directly a a field with __aggreget::get__:
 ```Cpp
 std::cout << "Aggreget (The same as above but in one function)" << std::endl;
-	std::cout << "The string is: " << aggreget::get<0>(my_awesome_struct) << std::endl;
-	std::cout << "The int is: " << aggreget::get<1>(my_awesome_struct) << std::endl;
-	std::cout << "The double is: " << aggreget::get<2>(my_awesome_struct) << std::endl;
+std::cout << "The string is: " << aggreget::get<0>(my_awesome_struct) << std::endl;
+std::cout << "The int is: " << aggreget::get<1>(my_awesome_struct) << std::endl;
+std::cout << "The double is: " << aggreget::get<2>(my_awesome_struct) << std::endl;
 ```
 
 The whole example is in the file __example.cpp__.
