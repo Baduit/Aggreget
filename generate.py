@@ -22,7 +22,7 @@ def generate_concept(n: int, output_file: typing.TextIO):
 	output_file.write('\n')
 
 def generate_to_tuple(n: int, output_file: typing.TextIO):
-	output_file.write('auto to_tuple_impl(Has' + str(n) + 'attr auto t)\n')
+	output_file.write('constexpr auto to_tuple_impl(Has' + str(n) + 'attr auto t)\n')
 	output_file.write('{\n')
 
 	if n != 0:
