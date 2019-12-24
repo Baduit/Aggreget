@@ -2,6 +2,8 @@
 
 #include <tuple>
 
+#include "aggregate_concept.hpp"
+
 namespace aggreget
 {
 
@@ -14,6 +16,7 @@ namespace details
 
 template <typename T>
 concept Has0attr = 
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -24,6 +27,7 @@ concept Has0attr =
 template <typename T>
 concept Has1attr = 
 	Has0attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -34,6 +38,7 @@ concept Has1attr =
 template <typename T>
 concept Has2attr = 
 	Has1attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -44,6 +49,7 @@ concept Has2attr =
 template <typename T>
 concept Has3attr = 
 	Has2attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -54,6 +60,7 @@ concept Has3attr =
 template <typename T>
 concept Has4attr = 
 	Has3attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -64,6 +71,7 @@ concept Has4attr =
 template <typename T>
 concept Has5attr = 
 	Has4attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -74,6 +82,7 @@ concept Has5attr =
 template <typename T>
 concept Has6attr = 
 	Has5attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -84,6 +93,7 @@ concept Has6attr =
 template <typename T>
 concept Has7attr = 
 	Has6attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -94,6 +104,7 @@ concept Has7attr =
 template <typename T>
 concept Has8attr = 
 	Has7attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -104,6 +115,7 @@ concept Has8attr =
 template <typename T>
 concept Has9attr = 
 	Has8attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -114,6 +126,7 @@ concept Has9attr =
 template <typename T>
 concept Has10attr = 
 	Has9attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -124,6 +137,7 @@ concept Has10attr =
 template <typename T>
 concept Has11attr = 
 	Has10attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -134,6 +148,7 @@ concept Has11attr =
 template <typename T>
 concept Has12attr = 
 	Has11attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -144,6 +159,7 @@ concept Has12attr =
 template <typename T>
 concept Has13attr = 
 	Has12attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -154,6 +170,7 @@ concept Has13attr =
 template <typename T>
 concept Has14attr = 
 	Has13attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -164,6 +181,7 @@ concept Has14attr =
 template <typename T>
 concept Has15attr = 
 	Has14attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -174,6 +192,7 @@ concept Has15attr =
 template <typename T>
 concept Has16attr = 
 	Has15attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -184,6 +203,7 @@ concept Has16attr =
 template <typename T>
 concept Has17attr = 
 	Has16attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -194,6 +214,7 @@ concept Has17attr =
 template <typename T>
 concept Has18attr = 
 	Has17attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -204,6 +225,7 @@ concept Has18attr =
 template <typename T>
 concept Has19attr = 
 	Has18attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -214,6 +236,7 @@ concept Has19attr =
 template <typename T>
 concept Has20attr = 
 	Has19attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -224,6 +247,7 @@ concept Has20attr =
 template <typename T>
 concept Has21attr = 
 	Has20attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -234,6 +258,7 @@ concept Has21attr =
 template <typename T>
 concept Has22attr = 
 	Has21attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -244,6 +269,7 @@ concept Has22attr =
 template <typename T>
 concept Has23attr = 
 	Has22attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{
@@ -254,6 +280,7 @@ concept Has23attr =
 template <typename T>
 concept Has24attr = 
 	Has23attr<T> &&
+	Aggregate<T> &&
 	requires(T& t)
 	{
 		{

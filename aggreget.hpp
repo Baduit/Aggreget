@@ -6,9 +6,6 @@ namespace aggreget
 {
 
 template <typename T>
-concept Aggregate = std::is_aggregate_v<T>;
-
-template <typename T>
 constexpr auto to_tuple(const T& t)
 {
 	return details::to_tuple_impl(t);

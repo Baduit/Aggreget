@@ -8,6 +8,7 @@ def generate_concept(n: int, output_file: typing.TextIO):
 	output_file.write('concept Has' + str(n) + 'attr = \n')
 	if n != 0:
 		output_file.write('\tHas' + str(n - 1) + 'attr<T> &&\n')
+	output_file.write('\tAggregate<T> &&\n')
 	output_file.write('\trequires(T& t)\n')
 	output_file.write('\t{\n')
 	output_file.write('\t\t{\n')
@@ -53,6 +54,7 @@ def main():
 	output_file = open(args.output, "w")
 	output_file.write('#pragma once\n\n')
 	output_file.write('#include <tuple>\n\n')
+	output_file.write('#include "aggregate_concept.hpp"\n\n')
 
 	output_file.write('namespace aggreget\n')
 	output_file.write('{\n\n')
