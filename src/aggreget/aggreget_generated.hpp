@@ -292,150 +292,175 @@ concept Has24attr =
 ** ToTupleDetails
 */
 
-constexpr auto to_tuple_impl(Has0attr auto t)
+template <Has0attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	return std::tuple();
 }
 
-constexpr auto to_tuple_impl(Has1attr auto t)
+template <Has1attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0] = t;
 	return std::tuple(a0);
 }
 
-constexpr auto to_tuple_impl(Has2attr auto t)
+template <Has2attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1] = t;
 	return std::tuple(a0, a1);
 }
 
-constexpr auto to_tuple_impl(Has3attr auto t)
+template <Has3attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2] = t;
 	return std::tuple(a0, a1, a2);
 }
 
-constexpr auto to_tuple_impl(Has4attr auto t)
+template <Has4attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3] = t;
 	return std::tuple(a0, a1, a2, a3);
 }
 
-constexpr auto to_tuple_impl(Has5attr auto t)
+template <Has5attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4] = t;
 	return std::tuple(a0, a1, a2, a3, a4);
 }
 
-constexpr auto to_tuple_impl(Has6attr auto t)
+template <Has6attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5);
 }
 
-constexpr auto to_tuple_impl(Has7attr auto t)
+template <Has7attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6);
 }
 
-constexpr auto to_tuple_impl(Has8attr auto t)
+template <Has8attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7);
 }
 
-constexpr auto to_tuple_impl(Has9attr auto t)
+template <Has9attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8);
 }
 
-constexpr auto to_tuple_impl(Has10attr auto t)
+template <Has10attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
 }
 
-constexpr auto to_tuple_impl(Has11attr auto t)
+template <Has11attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
 }
 
-constexpr auto to_tuple_impl(Has12attr auto t)
+template <Has12attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
 }
 
-constexpr auto to_tuple_impl(Has13attr auto t)
+template <Has13attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
 }
 
-constexpr auto to_tuple_impl(Has14attr auto t)
+template <Has14attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
 }
 
-constexpr auto to_tuple_impl(Has15attr auto t)
+template <Has15attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14);
 }
 
-constexpr auto to_tuple_impl(Has16attr auto t)
+template <Has16attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15);
 }
 
-constexpr auto to_tuple_impl(Has17attr auto t)
+template <Has17attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16);
 }
 
-constexpr auto to_tuple_impl(Has18attr auto t)
+template <Has18attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
 }
 
-constexpr auto to_tuple_impl(Has19attr auto t)
+template <Has19attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
 }
 
-constexpr auto to_tuple_impl(Has20attr auto t)
+template <Has20attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19);
 }
 
-constexpr auto to_tuple_impl(Has21attr auto t)
+template <Has21attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
 }
 
-constexpr auto to_tuple_impl(Has22attr auto t)
+template <Has22attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21);
 }
 
-constexpr auto to_tuple_impl(Has23attr auto t)
+template <Has23attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22);
 }
 
-constexpr auto to_tuple_impl(Has24attr auto t)
+template <Has24attr T>
+constexpr auto to_tuple_impl(T t)
 {
 	auto [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23] = t;
 	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23);
