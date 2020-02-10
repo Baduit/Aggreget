@@ -52,8 +52,6 @@ Then I use the fact that concept are use in overload resolution, so there is an 
 - A good readme (Explanations, example, how to use the python, etc)
 - Add unit test and not just have an example
 - Add little utilies maybe (get_tuple_size, operator <<)
-- Flat version
-- Organize the files
 - Use feature test macro
 - Add a way to detect if a structure has too many fields and make a static assertion to say that you need to generate the aggreget_generated.hpp file with more fields
 - ???
