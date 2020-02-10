@@ -59,3 +59,5 @@ target_include_directories(example
                       
 # Tests
 include(CTest)
+
+add_subdirectory(test)
