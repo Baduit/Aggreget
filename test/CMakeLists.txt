@@ -6,7 +6,7 @@ target_compile_features(aggreget_test PRIVATE cxx_std_20)
 target_compile_options(aggreget_test
                        PRIVATE
                        $<$<CXX_COMPILER_ID:MSVC>:/W3 /permissive- /TP>
-					   $<$<CXX_COMPILER_ID:GNU>:-Wextra -Wall -Wsign-conversion -Wfloat-equal -pedantic -Wredundant-decls -Wshadow -Wpointer-arith>)
+					   $<$<OR:$<CXX_COMPILER_ID:GNU>,$<CXX_COMPILER_ID:Clang>>:-Wextra -Wall -Wsign-conversion -Wfloat-equal -pedantic -Wredundant-decls -Wshadow -Wpointer-arith>)
 					   
 target_include_directories(aggreget_test PRIVATE
 					   	$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>

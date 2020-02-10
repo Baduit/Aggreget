@@ -10,7 +10,7 @@ target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_20)
 target_compile_options(${PROJECT_NAME}
 					   INTERFACE
                        $<$<CXX_COMPILER_ID:MSVC>:/W3 /permissive- /TP>
-					   $<$<CXX_COMPILER_ID:GNU>:-Wextra -Wall -Wsign-conversion -Wfloat-equal -pedantic -Wredundant-decls -Wshadow -Wpointer-arith>)
+					   $<$<OR:$<CXX_COMPILER_ID:GNU>,$<CXX_COMPILER_ID:Clang>>:-Wextra -Wall -Wsign-conversion -Wfloat-equal -pedantic -Wredundant-decls -Wshadow -Wpointer-arith>)
 					   
 target_include_directories(${PROJECT_NAME}
                            INTERFACE
@@ -52,7 +52,7 @@ target_compile_features(example PRIVATE cxx_std_20)
 target_compile_options(example
                        PRIVATE
                        $<$<CXX_COMPILER_ID:MSVC>:/W3 /permissive- /TP>
-                       $<$<CXX_COMPILER_ID:GNU>:-Wextra -Wall -Wsign-conversion -Wfloat-equal -pedantic -Wredundant-decls -Wshadow -Wpointer-arith>)
+                       $<$<OR:$<CXX_COMPILER_ID:GNU>,$<CXX_COMPILER_ID:Clang>>:-Wextra -Wall -Wsign-conversion -Wfloat-equal -pedantic -Wredundant-decls -Wshadow -Wpointer-arith>)
 target_include_directories(example
                            PUBLIC
                            ${CMAKE_CURRENT_LIST_DIR}/src/)
