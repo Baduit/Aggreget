@@ -69,7 +69,7 @@ def generate_to_tuple_forwarding(n: int, output_file: typing.TextIO):
 
 
 def main():
-	parser = argparse.ArgumentParser(description='Graphical user interface for YololTranslator')
+	parser = argparse.ArgumentParser(description='Generate stuff for aggreget_generated.hpp')
 	parser.add_argument('-n', '--nb', type=int, default=25, help='The max number of attributes handled')
 	parser.add_argument('-o', '--output', default='./src/aggreget/aggreget_generated.hpp', help='Path of the output file')
 	args = parser.parse_args()
