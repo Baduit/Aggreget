@@ -17,7 +17,7 @@ constexpr auto to_tuple(const T& t)
 template <Aggregate T>
 constexpr auto to_tuple(T&& t)
 {
-	return details::to_tuple_impl_fref(std::move(t));
+	return details::to_tuple_impl_fref(std::forward<T>(t));
 }
 
 /*
@@ -49,9 +49,9 @@ auto convert(Input&& i)
 	return std::apply(
 		[&](auto&&... args)
 		{
-			return Output { std::move(args)... };
+			return Output { std::forward<decltype(args)>(args)... };
 		},
-		to_tuple(std::move(i)));
+		to_tuple(std::forward<Input>(i)));
 }
 
 template <Aggregate Output, Aggregate Input>
