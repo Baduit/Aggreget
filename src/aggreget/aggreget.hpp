@@ -45,7 +45,7 @@ constexpr auto foreach(const T& t, Cb&& cb)
 template <Aggregate Output, Aggregate Input>
 auto convert(Input&& i)
 {
-	// Later add a static assert so that Output and Input have the same number of argument
+	// Later add a static assert so that Output and Input have the same number of attributes
 	return std::apply(
 		[&](auto&&... args)
 		{
@@ -57,7 +57,7 @@ auto convert(Input&& i)
 template <Aggregate Output, Aggregate Input>
 auto convert(const Input& i)
 {
-	// Later add a static assert so that Output and Input have the same number of argument
+	// Later add a static assert so that Output and Input have the same number of attributes
 	return std::apply(
 		[&](const auto&... args)
 		{
