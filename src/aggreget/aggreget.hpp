@@ -18,9 +18,11 @@ constexpr auto get(const T& t)
 }
 
 template <Aggregate T, typename Cb>
-auto foreach(const T& t, Cb&& cb)
+constexpr auto foreach(const T& t, Cb&& cb)
 {
 	return std::apply([&](auto&&... args) {(cb(args), ...);}, to_tuple(t));
 }
+
+
 
 }

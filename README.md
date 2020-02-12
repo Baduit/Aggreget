@@ -49,9 +49,10 @@ There is a concept for each number of attributes a structure can have (default i
 Then I use the fact that concept are use in overload resolution, so there is an overload of _to_tuple_ function for each concept. To transform the structure into a tuple I use [structure binding](https://en.cppreference.com/w/cpp/language/structured_binding).
 
 ## TODO
-- A good readme (Explanations, example, how to use the python, etc)
-- Add little utilies maybe (get_tuple_size, operator <<)
+- A Better readme (Explanations, example, how to use the python, etc)
+- Implement stuff with "tuple_size"
 - Use feature test macro
 - Add a way to detect if a structure has too many fields and make a static assertion to say that you need to generate the aggreget_generated.hpp file with more fields
+- Port it on vcpkg ?
 - ???
 - Profit
