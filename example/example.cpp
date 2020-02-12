@@ -2,6 +2,7 @@
 #include <utility>
 #include <string>
 #include <tuple>
+#include <memory>
 
 #include "aggreget/aggreget.hpp"
 
@@ -36,7 +37,7 @@ int main()
 	std::cout << "The int is: " << aggreget::get<1>(my_awesome_struct) << std::endl;
 	std::cout << "The double is: " << aggreget::get<2>(my_awesome_struct) << std::endl << std::endl;;
 
-	auto my_simirlar_struct = aggreget::convert<SimilarStruct>(my_awesome_struct);
+	auto my_simirlar_struct = aggreget::convert<SimilarStruct>(std::move(my_awesome_struct));
 	std::cout << "Conversion:" << std::endl;
 	std::cout << "The string is: " << aggreget::get<0>(my_simirlar_struct) << std::endl;
 	std::cout << "The int is: " << aggreget::get<1>(my_simirlar_struct) << std::endl;

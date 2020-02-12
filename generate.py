@@ -24,11 +24,11 @@ def generate_concept(n: int, output_file: typing.TextIO):
 
 def generate_to_tuple(n: int, output_file: typing.TextIO):
 	output_file.write('template <Has' + str(n) + 'attr T>\n')
-	output_file.write('constexpr auto to_tuple_impl(const T& t)\n')
+	output_file.write('constexpr auto to_tuple_impl_cref(const T& t)\n')
 	output_file.write('{\n')
 
 	if n != 0:
-		output_file.write('\tauto [')
+		output_file.write('\tconst auto& [')
 		for i in range(0, n):
 			if i != 0:
 				output_file.write(', ')
@@ -40,6 +40,28 @@ def generate_to_tuple(n: int, output_file: typing.TextIO):
 		if i != 0:
 			output_file.write(', ')
 		output_file.write('a' + str(i))
+	output_file.write(');\n')
+
+	output_file.write('}\n\n')
+
+def generate_to_tuple_forwarding(n: int, output_file: typing.TextIO):
+	output_file.write('template <Has' + str(n) + 'attr T>\n')
+	output_file.write('constexpr auto to_tuple_impl_fref(T&& t)\n')
+	output_file.write('{\n')
+
+	if n != 0:
+		output_file.write('\tauto&& [')
+		for i in range(0, n):
+			if i != 0:
+				output_file.write(', ')
+			output_file.write('a' + str(i))
+		output_file.write('] = t;\n')
+
+	output_file.write('\treturn std::tuple(')
+	for i in range(0, n):
+		if i != 0:
+			output_file.write(', ')
+		output_file.write('std::move(a' + str(i) + ')')
 	output_file.write(');\n')
 
 	output_file.write('}\n\n')
@@ -67,9 +89,13 @@ def main():
 	for i in range (0, args.nb):
 		generate_concept(i, output_file)
 
-	output_file.write('/*\n** ToTupleDetails\n*/\n\n')
+	output_file.write('/*\n** ToTupleDetails constant ref\n*/\n\n')
 	for i in range (0, args.nb):
 		generate_to_tuple(i, output_file)
+
+	output_file.write('/*\n** ToTupleDetails forwarding ref\n*/\n\n')
+	for i in range (0, args.nb):
+		generate_to_tuple_forwarding(i, output_file)
 
 	output_file.write('\n}\n')
 
