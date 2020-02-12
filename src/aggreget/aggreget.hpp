@@ -38,6 +38,12 @@ constexpr auto foreach(const T& t, Cb&& cb)
 	return std::apply([&](auto&&... args) {(cb(args), ...);}, to_tuple(t));
 }
 
+template <Aggregate T, typename Cb>
+constexpr auto foreach(T&& t, Cb&& cb)
+{
+	return std::apply([&](auto&&... args) {(cb(std::forward<decltype(args)>(args)), ...);}, to_tuple(std::forward<T>(t)));
+}
+
 /*
 ** Convert
 */
