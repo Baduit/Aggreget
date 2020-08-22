@@ -21,6 +21,8 @@ void basic_test()
 	assert(aggreget::get<0>(s) == "Yolol");
 	assert(aggreget::get<1>(s) == 42);
 	assert(aggreget::get<2>(s) == 42.42);
+	assert(aggreget::get_tuple_size(s) == 3);
+	assert(aggreget::get_tuple_size<Struct>() == 3);
 }
 
 bool dummy_not_error_proof_start_with_because_still_not_implemented_and_that_make_me_sad(std::string_view str, std::string_view substr)

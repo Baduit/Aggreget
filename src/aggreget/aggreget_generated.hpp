@@ -644,6 +644,160 @@ constexpr auto to_tuple_impl_fref(T&& t)
 	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17), std::move(a18), std::move(a19), std::move(a20), std::move(a21), std::move(a22), std::move(a23));
 }
 
+/*
+** GetTupleSizeDetails
+*/
+
+template <Has0attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 0;
+}
+
+template <Has1attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 1;
+}
+
+template <Has2attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 2;
+}
+
+template <Has3attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 3;
+}
+
+template <Has4attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 4;
+}
+
+template <Has5attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 5;
+}
+
+template <Has6attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 6;
+}
+
+template <Has7attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 7;
+}
+
+template <Has8attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 8;
+}
+
+template <Has9attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 9;
+}
+
+template <Has10attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 10;
+}
+
+template <Has11attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 11;
+}
+
+template <Has12attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 12;
+}
+
+template <Has13attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 13;
+}
+
+template <Has14attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 14;
+}
+
+template <Has15attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 15;
+}
+
+template <Has16attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 16;
+}
+
+template <Has17attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 17;
+}
+
+template <Has18attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 18;
+}
+
+template <Has19attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 19;
+}
+
+template <Has20attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 20;
+}
+
+template <Has21attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 21;
+}
+
+template <Has22attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 22;
+}
+
+template <Has23attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 23;
+}
+
+template <Has24attr T>
+constexpr std::size_t get_tuple_size_impl()
+{
+	return 24;
+}
+
 
 }
 

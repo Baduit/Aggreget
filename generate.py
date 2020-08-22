@@ -66,6 +66,13 @@ def generate_to_tuple_forwarding(n: int, output_file: typing.TextIO):
 
 	output_file.write('}\n\n')
 
+def generate_get_tuple_size(n: int, output_file: typing.TextIO):
+	output_file.write('template <Has' + str(n) + 'attr T>\n')
+	output_file.write('constexpr std::size_t get_tuple_size_impl()\n')
+	output_file.write('{\n')
+	output_file.write('\treturn ' + str(n) + ';\n')
+	output_file.write('}\n\n')
+
 
 
 def main():
@@ -96,6 +103,10 @@ def main():
 	output_file.write('/*\n** ToTupleDetails forwarding ref\n*/\n\n')
 	for i in range (0, args.nb):
 		generate_to_tuple_forwarding(i, output_file)
+
+	output_file.write('/*\n** GetTupleSizeDetails\n*/\n\n')
+	for i in range (0, args.nb):
+		generate_get_tuple_size(i, output_file)
 
 	output_file.write('\n}\n')
 

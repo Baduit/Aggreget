@@ -72,4 +72,16 @@ constexpr auto convert(const Input& i)
 		to_tuple(i));
 }
 
+template <Aggregate Input>
+constexpr std::size_t get_tuple_size(const Input&)
+{
+	return details::get_tuple_size_impl<Input>();
+}
+
+template <Aggregate Input>
+constexpr std::size_t get_tuple_size()
+{
+	return details::get_tuple_size_impl<Input>();
+}
+
 }
