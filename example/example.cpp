@@ -4,7 +4,7 @@
 #include <tuple>
 #include <memory>
 
-#include "aggreget/aggreget.hpp"
+#include <aggreget/aggreget.hpp>
 
 struct AwesomeStruct
 {

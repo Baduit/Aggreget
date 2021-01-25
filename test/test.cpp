@@ -6,7 +6,7 @@
 #include <vector>
 #include <string_view>
 
-#include "aggreget/aggreget.hpp"
+#include <aggreget/aggreget.hpp>
 
 struct Struct
 {
