@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <string_view>
+#include <compare>
 
 #include <aggreget/aggreget.hpp>
 
@@ -58,8 +59,39 @@ void foreach_test()
 	assert(dummy_not_error_proof_start_with_because_still_not_implemented_and_that_make_me_sad(results[2], "42.42"));
 }
 
+struct Lol
+{
+	std::string name;
+	int id;
+
+	bool operator==(const Lol&) const = default;
+};
+
+void modify_attr(std::string& str)
+{
+	str = "toast";
+}
+
+void modify_attr(int& i)
+{
+	i = 3;
+}
+
+void modify_aggregate()
+{
+	Lol base { .name = "lol", .id = 5 };
+	Lol expected { .name = "toast", .id = 3 };
+	aggreget::foreach(base,
+		[](auto& value)
+		{
+			modify_attr(value);
+		});
+	assert(base == expected);
+}
+
 int main()
 {
 	basic_test();
 	foreach_test();
+	modify_aggregate();
 }

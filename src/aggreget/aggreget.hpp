@@ -20,11 +20,23 @@ constexpr auto to_tuple(T&& t)
 	return details::to_tuple_impl_fref(std::forward<T>(t));
 }
 
+template <Aggregate T>
+constexpr auto to_tuple(T& t)
+{
+	return details::to_tuple_impl_ref(t);
+}
+
 /*
 ** Get
 */
 template <std::size_t Index, Aggregate T>
-constexpr auto get(const T& t)
+constexpr const auto& get(const T& t)
+{
+	return std::get<Index>(to_tuple(t));
+}
+
+template <std::size_t Index, Aggregate T>
+constexpr auto& get(T& t)
 {
 	return std::get<Index>(to_tuple(t));
 }
@@ -42,6 +54,12 @@ template <Aggregate T, typename Cb>
 constexpr auto foreach(T&& t, Cb&& cb)
 {
 	return std::apply([&](auto&&... args) {(cb(std::forward<decltype(args)>(args)), ...);}, to_tuple(std::forward<T>(t)));
+}
+
+template <Aggregate T, typename Cb>
+constexpr auto foreach(T& t, Cb&& cb)
+{
+	return std::apply([&](auto&&... args) {(cb(args), ...);}, to_tuple(t));
 }
 
 /*

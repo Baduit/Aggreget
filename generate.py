@@ -35,7 +35,7 @@ def generate_to_tuple(n: int, output_file: typing.TextIO):
 			output_file.write('a' + str(i))
 		output_file.write('] = t;\n')
 
-	output_file.write('\treturn std::tuple(')
+	output_file.write('\treturn std::forward_as_tuple(')
 	for i in range(0, n):
 		if i != 0:
 			output_file.write(', ')
@@ -57,11 +57,33 @@ def generate_to_tuple_forwarding(n: int, output_file: typing.TextIO):
 			output_file.write('a' + str(i))
 		output_file.write('] = t;\n')
 
-	output_file.write('\treturn std::tuple(')
+	output_file.write('\treturn std::forward_as_tuple(')
 	for i in range(0, n):
 		if i != 0:
 			output_file.write(', ')
-		output_file.write('std::move(a' + str(i) + ')')
+		output_file.write('std::forward<decltype(a' + str(i) + ')>(a' + str(i) + ')')
+	output_file.write(');\n')
+
+	output_file.write('}\n\n')
+
+def generate_to_tuple_ref(n: int, output_file: typing.TextIO):
+	output_file.write('template <Has' + str(n) + 'attr T>\n')
+	output_file.write('constexpr auto to_tuple_impl_ref(T& t)\n')
+	output_file.write('{\n')
+
+	if n != 0:
+		output_file.write('\tauto& [')
+		for i in range(0, n):
+			if i != 0:
+				output_file.write(', ')
+			output_file.write('a' + str(i))
+		output_file.write('] = t;\n')
+
+	output_file.write('\treturn std::forward_as_tuple(')
+	for i in range(0, n):
+		if i != 0:
+			output_file.write(', ')
+		output_file.write('a' + str(i))
 	output_file.write(');\n')
 
 	output_file.write('}\n\n')
@@ -103,6 +125,10 @@ def main():
 	output_file.write('/*\n** ToTupleDetails forwarding ref\n*/\n\n')
 	for i in range (0, args.nb):
 		generate_to_tuple_forwarding(i, output_file)
+
+	output_file.write('/*\n** ToTupleDetails ref\n*/\n\n')
+	for i in range (0, args.nb):
+		generate_to_tuple_ref(i, output_file)
 
 	output_file.write('/*\n** GetTupleSizeDetails\n*/\n\n')
 	for i in range (0, args.nb):

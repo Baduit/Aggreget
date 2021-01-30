@@ -295,175 +295,175 @@ concept Has24attr =
 template <Has0attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
-	return std::tuple();
+	return std::forward_as_tuple();
 }
 
 template <Has1attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0] = t;
-	return std::tuple(a0);
+	return std::forward_as_tuple(a0);
 }
 
 template <Has2attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1] = t;
-	return std::tuple(a0, a1);
+	return std::forward_as_tuple(a0, a1);
 }
 
 template <Has3attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2] = t;
-	return std::tuple(a0, a1, a2);
+	return std::forward_as_tuple(a0, a1, a2);
 }
 
 template <Has4attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3] = t;
-	return std::tuple(a0, a1, a2, a3);
+	return std::forward_as_tuple(a0, a1, a2, a3);
 }
 
 template <Has5attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4] = t;
-	return std::tuple(a0, a1, a2, a3, a4);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4);
 }
 
 template <Has6attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5);
 }
 
 template <Has7attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6);
 }
 
 template <Has8attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7);
 }
 
 template <Has9attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8);
 }
 
 template <Has10attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
 }
 
 template <Has11attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
 }
 
 template <Has12attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
 }
 
 template <Has13attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
 }
 
 template <Has14attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
 }
 
 template <Has15attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14);
 }
 
 template <Has16attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15);
 }
 
 template <Has17attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16);
 }
 
 template <Has18attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
 }
 
 template <Has19attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
 }
 
 template <Has20attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19);
 }
 
 template <Has21attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
 }
 
 template <Has22attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21);
 }
 
 template <Has23attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22);
 }
 
 template <Has24attr T>
 constexpr auto to_tuple_impl_cref(const T& t)
 {
 	const auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23] = t;
-	return std::tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23);
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23);
 }
 
 /*
@@ -473,175 +473,353 @@ constexpr auto to_tuple_impl_cref(const T& t)
 template <Has0attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
-	return std::tuple();
+	return std::forward_as_tuple();
 }
 
 template <Has1attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0] = t;
-	return std::tuple(std::move(a0));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0));
 }
 
 template <Has2attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1] = t;
-	return std::tuple(std::move(a0), std::move(a1));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1));
 }
 
 template <Has3attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2));
 }
 
 template <Has4attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3));
 }
 
 template <Has5attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4));
 }
 
 template <Has6attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5));
 }
 
 template <Has7attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6));
 }
 
 template <Has8attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7));
 }
 
 template <Has9attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8));
 }
 
 template <Has10attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9));
 }
 
 template <Has11attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10));
 }
 
 template <Has12attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11));
 }
 
 template <Has13attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12));
 }
 
 template <Has14attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13));
 }
 
 template <Has15attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14));
 }
 
 template <Has16attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15));
 }
 
 template <Has17attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16));
 }
 
 template <Has18attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16), std::forward<decltype(a17)>(a17));
 }
 
 template <Has19attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17), std::move(a18));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16), std::forward<decltype(a17)>(a17), std::forward<decltype(a18)>(a18));
 }
 
 template <Has20attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17), std::move(a18), std::move(a19));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16), std::forward<decltype(a17)>(a17), std::forward<decltype(a18)>(a18), std::forward<decltype(a19)>(a19));
 }
 
 template <Has21attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17), std::move(a18), std::move(a19), std::move(a20));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16), std::forward<decltype(a17)>(a17), std::forward<decltype(a18)>(a18), std::forward<decltype(a19)>(a19), std::forward<decltype(a20)>(a20));
 }
 
 template <Has22attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17), std::move(a18), std::move(a19), std::move(a20), std::move(a21));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16), std::forward<decltype(a17)>(a17), std::forward<decltype(a18)>(a18), std::forward<decltype(a19)>(a19), std::forward<decltype(a20)>(a20), std::forward<decltype(a21)>(a21));
 }
 
 template <Has23attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17), std::move(a18), std::move(a19), std::move(a20), std::move(a21), std::move(a22));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16), std::forward<decltype(a17)>(a17), std::forward<decltype(a18)>(a18), std::forward<decltype(a19)>(a19), std::forward<decltype(a20)>(a20), std::forward<decltype(a21)>(a21), std::forward<decltype(a22)>(a22));
 }
 
 template <Has24attr T>
 constexpr auto to_tuple_impl_fref(T&& t)
 {
 	auto&& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23] = t;
-	return std::tuple(std::move(a0), std::move(a1), std::move(a2), std::move(a3), std::move(a4), std::move(a5), std::move(a6), std::move(a7), std::move(a8), std::move(a9), std::move(a10), std::move(a11), std::move(a12), std::move(a13), std::move(a14), std::move(a15), std::move(a16), std::move(a17), std::move(a18), std::move(a19), std::move(a20), std::move(a21), std::move(a22), std::move(a23));
+	return std::forward_as_tuple(std::forward<decltype(a0)>(a0), std::forward<decltype(a1)>(a1), std::forward<decltype(a2)>(a2), std::forward<decltype(a3)>(a3), std::forward<decltype(a4)>(a4), std::forward<decltype(a5)>(a5), std::forward<decltype(a6)>(a6), std::forward<decltype(a7)>(a7), std::forward<decltype(a8)>(a8), std::forward<decltype(a9)>(a9), std::forward<decltype(a10)>(a10), std::forward<decltype(a11)>(a11), std::forward<decltype(a12)>(a12), std::forward<decltype(a13)>(a13), std::forward<decltype(a14)>(a14), std::forward<decltype(a15)>(a15), std::forward<decltype(a16)>(a16), std::forward<decltype(a17)>(a17), std::forward<decltype(a18)>(a18), std::forward<decltype(a19)>(a19), std::forward<decltype(a20)>(a20), std::forward<decltype(a21)>(a21), std::forward<decltype(a22)>(a22), std::forward<decltype(a23)>(a23));
+}
+
+/*
+** ToTupleDetails ref
+*/
+
+template <Has0attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	return std::forward_as_tuple();
+}
+
+template <Has1attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0] = t;
+	return std::forward_as_tuple(a0);
+}
+
+template <Has2attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1] = t;
+	return std::forward_as_tuple(a0, a1);
+}
+
+template <Has3attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2] = t;
+	return std::forward_as_tuple(a0, a1, a2);
+}
+
+template <Has4attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3);
+}
+
+template <Has5attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4);
+}
+
+template <Has6attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5);
+}
+
+template <Has7attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6);
+}
+
+template <Has8attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7);
+}
+
+template <Has9attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+}
+
+template <Has10attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+}
+
+template <Has11attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
+}
+
+template <Has12attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
+}
+
+template <Has13attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
+}
+
+template <Has14attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
+}
+
+template <Has15attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14);
+}
+
+template <Has16attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15);
+}
+
+template <Has17attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16);
+}
+
+template <Has18attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
+}
+
+template <Has19attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
+}
+
+template <Has20attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19);
+}
+
+template <Has21attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
+}
+
+template <Has22attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21);
+}
+
+template <Has23attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22);
+}
+
+template <Has24attr T>
+constexpr auto to_tuple_impl_ref(T& t)
+{
+	auto& [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23] = t;
+	return std::forward_as_tuple(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23);
 }
 
 /*
