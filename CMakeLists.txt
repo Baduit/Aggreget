@@ -14,7 +14,7 @@ target_include_directories(aggreget INTERFACE ${CMAKE_CURRENT_LIST_DIR}/src)
 	
 
 # Example
-add_executable(example ./example/example.cpp)
+add_executable(example ./examples/example.cpp)
 target_compile_features(example PRIVATE cxx_std_20)
 target_compile_options(example
                        PRIVATE
