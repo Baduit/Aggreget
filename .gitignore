@@ -37,3 +37,4 @@
 #build directories
 build/
 gcc_build
+gcc

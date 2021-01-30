@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.9)
 
-project(AggregetLib VERSION 1.1 DESCRIPTION "Use your structures like tuples")
+project(AggregetLib VERSION 1.2 DESCRIPTION "Use your structures like tuples")
 
 # Library
 add_library(aggreget INTERFACE)
