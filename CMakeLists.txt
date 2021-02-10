@@ -7,12 +7,7 @@ option(TESTS "TESTS" ON)
 
 # Library
 add_library(aggreget INTERFACE)
-target_compile_features(aggreget INTERFACE cxx_std_20)
-target_compile_options(aggreget
-					   INTERFACE
-                       $<$<CXX_COMPILER_ID:MSVC>:/W3 /permissive- /TP>
-					   $<$<OR:$<CXX_COMPILER_ID:GNU>,$<CXX_COMPILER_ID:Clang>>:-Wextra -Wall -Wsign-conversion -Wfloat-equal -pedantic -Wredundant-decls -Wshadow -Wpointer-arith>)
-					   
+target_compile_features(aggreget INTERFACE cxx_std_20)				   
 target_include_directories(aggreget INTERFACE ${CMAKE_CURRENT_LIST_DIR}/src)
 	
 
